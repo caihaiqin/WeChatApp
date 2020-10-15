@@ -1,0 +1,13 @@
+<!--pages/text/text.wxml-->
+<text>pages/text/text.wxml</text>
+<!-- 默认文本不可选中 -->
+<!-- selectable 为true可以选中 -->
+<text selectable>你好</text>
+<!-- space觉得文本空格大小 -->
+<text space="ensp">hello world\n</text>
+<text space="nbsp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+<text>hello world\n</text>
+<text>hello world\n</text>
+<!-- decode是否解码文本 -->
+<text decode>5 &gt; 3</text>

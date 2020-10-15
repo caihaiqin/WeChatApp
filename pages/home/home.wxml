@@ -1,2 +1,4 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- text 行内元素 -->
+<text>pa</text>
+
