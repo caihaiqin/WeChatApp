@@ -1,56 +1,18 @@
-// pages/home/home.js
-// getApp()可以获取App()产生的小程序对象
-const app = getApp();
-console.log(app.globalData.name);
-// 注册页面
-// 注册页面是可以做的事情
-// 1 监听页面生命周期函数 
-// 请求页面数据
+// pages/category/category.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    count: 0,
-    msg: "hello",
-    students: [{
-      name: "cai",
-      age: 10
-    }, {
-      name: "zhang",
-      age: 30
-    }]
-  },
-  add() {
-    console.log('点击了');
-    this.setData({
-      count: this.data.count + 1
-    })
 
   },
-  sub() {
-    console.log('点击了');
-    this.setData({
-      count: this.data.count - 1
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("页面Home加载了");
-    
-    wx.request({
-      url: 'http://127.0.0.1:3000/pipeline/getNums',
-      
-      success: (res) => {
-        console.log(res);
 
-      }
-
-
-    })
   },
 
   /**

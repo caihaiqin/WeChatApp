@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 小程序 数据绑定 -->
+<text>{{msg}}</text>
+<!-- 小程序列表遍历 -->
+<view wx:for="{{students}}" wx:key="index">{{item.name}}</view>
+<!-- 小程序事件监听 -->
+<button size="mini" bindtap="add">+</button>
+<button size="mini" bindtap="sub">-</button>
+<text>{{count}}</text>
