@@ -1,0 +1,11 @@
+<!--pages/input/input.wxml-->
+<!-- value默认内容 type 决定键盘类型（英文 数字 身份证...) placeholder无内容时占位文字-->
+<input placeholder="请输入用户名" type="idcard" ></input>
+<!-- confirm-type键盘右下角按键文字
+ -->
+ <input confirm-type="search"></input>
+ <input confirm-type="send"></input>
+ <!-- Input绑定事件 -->
+ <input bindfocus="handleFoucus"
+ bindinput="handleInput"
+ bindblur="handleBlur"></input>

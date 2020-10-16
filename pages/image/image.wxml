@@ -1,0 +1,18 @@
+<!--pages/image/image.wxml-->
+<!-- image组件可以写单标签或双标签 -->
+<!-- 默认大小 320*240 是行内块元素-->
+<!-- src可以设置本地路径或者远程地址 -->
+<!-- 觉得路径/表示当前小程序项目的根路径 -->
+
+<image src="/assets/img/Snipaste_2020-09-15_19-06-11.jpg" mode="aspectFit"></image>
+<image  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+<text>haha</text>
+<!-- 补充：显示相册中的图片 -->
+<!-- 先让用户选择相册图片 -->
+<button bindtap="chooseImg">选择图片</button>
+<image src="{{imgPath}}"></image>
+
+<!-- bindload 监听图片加载完成 laze-load图片懒加载 -->
+<image wx:for="{{10}}" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="imgLoad" lazy-load></image>
+<!-- show-menu-by-longpress长按弹出识别二维吗 -->
+<image show-menu-by-longpress src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

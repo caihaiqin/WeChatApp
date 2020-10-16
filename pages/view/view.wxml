@@ -1,0 +1,9 @@
+<!--pages/view/view.wxml-->
+<!-- view 块级元素 独占一行 -->
+<view class="box">哈哈</view>
+<view>呵呵</view>
+<!-- hover-class按下后显示的样式 -->
+<view hover-class="hover" hover-stay-time="1000">hover-class</view>
+
+<!-- hover-stop阻止祖先点击态 -->
+<view hover-class="hover" hover-stay-time="1000">hover-class</view>

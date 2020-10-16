@@ -1,0 +1,10 @@
+/* pages/view/view.wxss */
+.box{
+  background-color: red;
+}
+.hover{
+  background-color:blue;
+  color: antiquewhite;
+  height: 40px;
+  font-size: 20px;
+}

@@ -1,0 +1,25 @@
+/* pages/scroll/scroll.wxss */
+.container{
+  background-color: antiquewhite;
+  white-space: nowrap;
+}
+.item{
+ display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 10px;
+}
+.container2{
+  background-color: cadetblue;
+  /* white-space: nowrap; */
+  height: 200px;
+  margin-top: 40px;
+}
+.item2{
+ /* display: inline-block; */
+  width: 100%;
+  height: 100px;
+  background-color: violet;
+  margin: 10px;
+}
