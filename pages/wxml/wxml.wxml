@@ -1,0 +1,64 @@
+<!--pages/wxml/wxml.wxml-->
+
+<text>pages/wxml/wxml.wxml</text>
+<text>{{nowTime}}</text>
+
+<view wx:if="{{isShow}}">show</view>
+<button bindtap="handleIsShow">显示/隐藏</button>
+
+
+
+<!-- hidden属性 -->
+<view hidden="{{isShow}}">hidden属性为true时隐藏</view>
+
+<view>-------------------</view>
+<button bindtap="handleScore">分数改变</button>
+<view>{{score}}</view>
+<view wx:if="{{score>90}}">优秀</view>
+<view wx:elif="{{score>80}}">良好</view>
+
+<!-- wx:if和hidden区别  hidden隐藏时组件依然存在（display:none) wx:if将组件隐藏时该组件不创建 -->
+<!-- 选择：如果显示隐藏切换频率高选择Hidden  频率低选择if -->
+
+<!-- wx:for  -->
+<view>wx:for列表渲染</view>
+<view wx:for="hello" wx:key="index">{{item}}{{index}}</view>
+<view wx:for="{{[1,2,5,6]}}" wx:key="index">{{item}}</view>
+<view wx:for="" wx:key="index"></view>
+
+<!-- <block>标签</block> 包裹多个组件-->
+<block wx:for="{{3}}" wx:key="index">
+	<button>按钮</button>
+	<view>内容</view>
+	<text>哈哈</text>
+</block>
+<block wx:if="{{isShow}}">
+	<button>按钮</button>
+	<view>内容</view>
+	<text>哈哈</text>
+</block>
+
+<!-- 遍历给item index起名字 多层遍历时使用 -->
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i" wx:key="index">{{movie}}{{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="outer" wx:key="index">
+	<block wx:for="{{outer}}" wx:for-item="inter" wx:key="index">
+		<view>{{inter}}</view>
+	</block>
+</block>
+
+<!-- key的作用 wx:key="index"提高性能-->
+
+<!-- 模板template 代码复用 模板包裹的内容在使用前不会进行渲染-->
+<!-- <template name="tmp">
+	<button>{{btnContent}}</button>
+	<view>{{textContent}}</view>
+</template> -->
+<!-- wxml导入方式 -->
+
+<!-- 1 import引入模板  绝对路径和相对路径都可以  不支持递归导入-->
+<import src="/pages/template/template.wxml"/>
+<!-- include 将公共wxml组件抽取到一个文件中 可以递归导入  但不支持template wxs -->
+<template is="tmp" data="{{btnContent:'提交',textContent:'你好'}}"></template>
+<template is="tmp" data="{{btnContent:'警告',textContent:'哈哈'}}"></template>
+<template is="tmp" data="{{btnContent:'点击',textContent:'呵呵'}}"></template>

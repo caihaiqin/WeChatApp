@@ -1,0 +1,12 @@
+<!--pages/wxss/wxss.wxml-->
+
+
+<!-- 1 设置样式3中方式 -->
+<!-- 行内样式 style  key:value中间用分号隔开-->
+<view class="box" style="color:red;">哈哈</view>
+<!-- 页内样式 在对应wxss中设置- 在本页面中生效->
+<!-- 全局样式 在app.wxss中设置 在所有页面中如果有相同的class组件都会生效 -->
+<!-- 三种样式优先级 行内》页内》全局 -->
+<!-- wxss单位 rpx -->
+<view class="box1">haha</view>
+<view class="box2">haha</view>

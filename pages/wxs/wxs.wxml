@@ -1,0 +1,16 @@
+<!--pages/wxs/wxs.wxml-->
+<text>用于对wxml中一些数据进行处理</text>
+<!-- wxs的定义方式 1 直接在wxml中定义-->
+	<!-- js代码 ES5 	-->
+<!-- <wxs module="info">
+
+	var	message = "hello 	cai ";
+  var sum=function(num1,num2){
+    return num1+num2;
+  }
+  module.exports={message:message,sum:sum}
+</wxs> -->
+<!-- 2 在wxs文件中定义  导入 只能使用相对路径  不能使用绝对路径 -->
+<wxs src="./info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.sum(1,5)}}</view>

@@ -1,0 +1,10 @@
+{/* <text>用于对wxml中一些数据进行处理</text> */}
+// <!-- wxs的定义方式 -->
+// 	<!-- js代码 ES5 	-->
+
+
+	var	message = "hello 	cai ";
+  var sum=function(num1,num2){
+    return num1+num2;
+  }
+  module.exports={message:message,sum:sum}
