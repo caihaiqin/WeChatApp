@@ -1,2 +1,47 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- pages/home/home.wxml -->
+<text>事件监听</text>
+<!-- 三种绑定方式 -->
+<!-- bind catch区别 -->
+<!-- bing 会一层层传递 -->
+<!-- catch 捕获到事件后不会继续传递 -->
+<button bind:tap="handleClick" id="btn">点击</button>
+<button catch:tap="handleClick">点击</button>
+<button bindtap="handleClick">点击</button>
+<!-- 组件常用事件 -->
+<!-- touchstart touchmove touchcancel touchend tap longpress -->
+<view
+ class="box"
+ bindtouchstart="handleStart"
+ bindtouchmove="handleMove"
+ bindtouchend="handleEnd"
+ bindtap="tap"
+ bindlongpress="handleLongPress"
+/>
+<!-- 可以在app.json注册或者某个page json注册 多个页面使用时在app.json注册 自定义组件命名 小写字母 中划线 下划线 -->
+<!-- 自定义组件设置的样式不会对引用页面的样式产生影响 -->
+<!-- 组件内不允许使用id选择器 属性选择器 标签选择器 -->
+<my-cpn/>
+<!-- 自定义组件传递数据 样式 -->
+<my-prop title="哈哈" titleclass="red"/>
+<my-prop titleclass="blue"/>
+<my-prop title="哈呵呵哈"/>
+<!-- 自定义组件传递事件 -->
+<my-event bind:add="add"/>
+<view>当前计数{{count}}</view>
+
+<!-- tab-control -->
+<tab-control titles="{{['流行','新款','精选']}}" bind:tabclick="tabclick"/>
+
+<!-- 页面操作组件数据/调用组件方法 -->
+<button bind:tap="handleEditCpn">修改组件数据</button>
+<my-select id="mysel" />
+
+<!-- 插槽的使用
+ -->
+ <!-- 注意事项 多插槽需给每个插槽添加name -->
+ <!-- 需在插槽组件添加options:{multipleSlots:true}, -->
+ <my-slot>
+ <view slot="right">我是插入内容1</view>
+ <button slot="mid">我是插入的按钮</button>
+ <slider slot="left"></slider>
+ </my-slot>

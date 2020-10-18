@@ -1,1 +1,12 @@
 /* pages/home/home.wxss */
+.box{
+  width: 400rpx;
+  height: 300rpx;
+  background-color: turquoise;
+}
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}

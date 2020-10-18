@@ -1,0 +1,7 @@
+<!--components/my-slot/my-slot.wxml-->
+<text>components/my-slot/my-slot.wxml</text>
+<view class="nav-bar">
+<slot class="bar-item" name="left"/>
+<slot class="bar-item" name="mid"/>
+<slot class="bar-item" name="right"/>
+</view>

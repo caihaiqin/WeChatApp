@@ -1,0 +1,4 @@
+<!-- components/my-prop/my-prop.wxml -->
+
+
+<view class="titleclass">prop组件{{title}}</view>
