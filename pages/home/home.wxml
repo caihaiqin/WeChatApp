@@ -1,2 +1,5 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text>实现onShareAppMessage函数</text>
+<button open-type="share">分享</button>
+<view>小程序登录流程 openid是微信客户的唯一标识</view>
+<!-- 登录操作在app.js进行 -->
