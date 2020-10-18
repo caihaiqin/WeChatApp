@@ -1,2 +1,3 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text>小程序系统API： 网络请求 wx.request()</text>
+
