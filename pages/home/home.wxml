@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view>toase消息展示</view>
+<button size="mini" bind:tap="handleShowToast">弹出toast</button>
+<view>model消息展示</view>
+<button size="mini" bind:tap="handleShowModel">弹窗model</button>
+<view>loading消息展示,必须手动调用hideLoading才会消失,比如用在调用网络请求时弹出，成功后消失</view>
+<button size="mini" bind:tap="handleShowLoading">弹窗Loading</button>
+<view>action消息展示</view>
+<button size="mini" bind:tap="handleShowAction">弹窗action</button>
