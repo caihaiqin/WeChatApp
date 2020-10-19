@@ -1,15 +1,10 @@
-// pages/home/home.js
+// pages/about/about.js
 Page({
-  handleToDetail(){
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    content:"哈哈"
 
   },
 

@@ -1,2 +1,19 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text>小程序页面跳转 </text>
+<view>1 通过navigator组件跳转 2 通过wx api跳转</view>
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+<!-- 2 <navigator></navigator> open-type属性 redirect 关闭当前页面 跳转到其他页面-->
+<navigator url="/pages/detail/detail" open-type="redirect">跳到详情页-redirect</navigator>
+<!-- 2 <navigator></navigator> open-type属性 switchTab  跳转到tabbar其他页面-->
+<navigator url="/pages/about/about" open-type="switchTab">跳到关于页-switchTab</navigator>
+<!-- 1.navigator页面跳转 -->
+<!-- 在跳转到的页面onload options参数中获得 -->
+<navigator url="/pages/detail/detail?age=18">跳到详情页传递数据</navigator>
+<!-- 1.navigator页面返回传递参数 -->
+<navigator url="/pages/detail/detail">从detail返回Home时显示内容变为呵呵</navigator>
+<view>{{content}}</view>
+
+<!-- 通过代码进行页面跳转
+ -->
+ <button bind:tap="handleToDetail">跳到详情页</button>

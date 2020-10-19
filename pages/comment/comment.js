@@ -1,15 +1,14 @@
-// pages/home/home.js
+// pages/comment/comment.js
 Page({
-  handleToDetail(){
-    wx.navigateTo({
-      url: '/pages/detail/detail',
+  handleBackHome(){
+    wx.navigateBack({
+      delta: 2,
     })
   },
   /**
    * 页面的初始数据
    */
   data: {
-    content:"哈哈"
 
   },
 

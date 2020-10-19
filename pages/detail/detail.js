@@ -1,15 +1,10 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
-  handleToDetail(){
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    content:"哈哈"
 
   },
 
@@ -17,6 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 得到其他页面跳转传递的数据
+console.log(options);
 
   },
 
@@ -45,6 +42,12 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    // 向返回页传递数据
+// 获取返回页的页面对象
+const pages = getCurrentPages();
+console.log(pages);
+pages[pages.length-2].setData({content:"呵呵"})
+
 
   },
 
